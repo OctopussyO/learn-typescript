@@ -5,10 +5,12 @@ enum RequestType {
   POST = 'post',
 }
 
+type httpMethod = 'get' | 'post'
+
 // для типизации `method` можно использовать либо enum:
 //    method: RequestType
 // либо литеральный тип:
-function fetchWithAuth(url: string, method: 'get' | 'post'): 1 | -1 {
+function fetchWithAuth(url: string, method: httpMethod): 1 | -1 {
   // return fetch()
   // return 0 // error
   return 1
